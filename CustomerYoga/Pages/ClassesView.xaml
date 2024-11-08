@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CustomerYoga.Pages.ClassesView"
+             Title="Classes">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="SearchBar"
+            Placeholder="Search by date"
+            TextChanged="OnSearchBarTextChanged" />
+            <Label Text="Yoga Classes"
+    Margin="0,10,0,0"
+    FontSize="Large"
+    HorizontalOptions="Center"
+    VerticalOptions="Start" />
+            <ListView x:Name="ClassesListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding Name}" FontAttributes="Bold" LineBreakMode="WordWrap" />
+                                        <Label Text="{Binding Teacher}" FontSize="Small" LineBreakMode="WordWrap" Margin="10, 0, 0, 0" />
+                                    </StackLayout>
+                                    <Label Text="{Binding Date, StringFormat='Date: {0:yyyy-MM-dd}'}" FontSize="Small" LineBreakMode="NoWrap" />
+                                </StackLayout>
+                                <Button Text="Order"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="End"
+                                    Command="{Binding Source={x:Reference ClassesListView}, Path=BindingContext.OrderCommand}"
+                                    CommandParameter="{Binding .}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

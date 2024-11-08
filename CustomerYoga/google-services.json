@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "994793712440",
+    "firebase_url": "https://exercise-2-e02e9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "exercise-2-e02e9",
+    "storage_bucket": "exercise-2-e02e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994793712440:android:59b2473b95ca4975812fcd",
+        "android_client_info": {
+          "package_name": "com.example.adminyoga"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACeUwlZJjyTT7gXBGCfWsTFQaAmxfqVtY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
